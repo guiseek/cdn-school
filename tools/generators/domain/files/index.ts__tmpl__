@@ -1,0 +1,9 @@
+export * from './lib/repositories/<%= name %>';
+export * from './lib/entities/<%= name %>';
+export * from './lib/objects/<%= name %>';
+
+export * from './lib/usecases/<%= name %>/find-all';
+export * from './lib/usecases/<%= name %>/find-by';
+export * from './lib/usecases/<%= name %>/create';
+export * from './lib/usecases/<%= name %>/update';
+export * from './lib/usecases/<%= name %>/remove';

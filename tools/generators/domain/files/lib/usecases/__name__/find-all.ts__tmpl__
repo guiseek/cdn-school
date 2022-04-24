@@ -1,0 +1,9 @@
+import { <%= entity.className %>Repository } from '../../repositories/<%= name %>';
+
+export class FindAll<%= entity.className %>sUseCase {
+  constructor(private readonly _repository: <%= entity.className %>Repository) {}
+
+  execute() {
+    return this._repository.findAll();
+  }
+}

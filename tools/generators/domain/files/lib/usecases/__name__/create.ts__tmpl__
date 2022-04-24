@@ -1,0 +1,10 @@
+import { <%= entity.className %>Repository } from '../../repositories/<%= name %>';
+import { <%= entity.className %>Entity } from '../../entities/<%= name %>';
+
+export class Create<%= entity.className %>UseCase {
+  constructor(private readonly _repository: <%= entity.className %>Repository) {}
+
+  execute(<%= entity.propertyName %>: <%= entity.className %>Entity) {
+    return this._repository.create(<%= entity.propertyName %>);
+  }
+}

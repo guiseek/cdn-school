@@ -1,0 +1,5 @@
+import { <%= entity.className %>Entity } from '../entities/<%= name %>';
+
+export const <%= entity.propertyName %>Object: <%= entity.className %>Entity = {
+
+}
