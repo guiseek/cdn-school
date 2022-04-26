@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "data-access",
+  "type": "object",
+  "properties": {
+    "domain": {
+      "type": "string",
+      "description": "Domain library.",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  },
+  "required": ["domain"]
+}

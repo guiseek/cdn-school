@@ -1,0 +1,13 @@
+import { <%= entity.className %>Entity } from '../entities/<%= name %>';
+
+export class <%= entity.className %>DataRepository {
+  abstract findAll(): <%= entity.className %>Entity[];
+
+  abstract findBy<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K]): <%= entity.className %>Entity;
+
+  abstract create(<%= entity.propertyName %>: <%= entity.className %>Entity): <%= entity.className %>Entity
+
+  abstract update<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K], <%= entity.propertyName %>: <%= entity.className %>Entity): <%= entity.className %>Entity
+
+  abstract remove<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K]): <%= entity.className %>Entity
+}
