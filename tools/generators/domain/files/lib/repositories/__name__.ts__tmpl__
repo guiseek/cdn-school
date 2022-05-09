@@ -1,13 +1,13 @@
 import { <%= entity.className %>Entity } from '../entities/<%= name %>';
 
-export abstract class <%= entity.className %>Repository {
-  abstract findAll(): <%= entity.className %>Entity[];
+export abstract class <%= entity.className %>Repository<T extends <%= entity.className %>Entity> {
+  abstract findAll(): T[];
 
-  abstract findBy<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K]): <%= entity.className %>Entity;
+  abstract findBy<K extends keyof T>(property: K, value: T[K]): T;
 
-  abstract create(<%= entity.propertyName %>: <%= entity.className %>Entity): <%= entity.className %>Entity
+  abstract create(<%= entity.propertyName %>: T): T
 
-  abstract update<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K], <%= entity.propertyName %>: <%= entity.className %>Entity): <%= entity.className %>Entity
+  abstract update<K extends keyof T>(property: K, value: T[K], <%= entity.propertyName %>: T): T
 
-  abstract remove<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K]): <%= entity.className %>Entity
+  abstract remove<K extends keyof T>(property: K, value: T[K]): T;
 }

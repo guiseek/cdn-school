@@ -11,26 +11,35 @@ import {
 
 interface Schema {
   directory: string;
+  usecases: boolean;
   name: string;
   tags: string;
 }
 
 function normalizeOptions(schema: Schema) {
-  schema.directory = schema.name;
-  schema.tags = 'type:domain';
-  schema.name = 'domain';
-  return schema;
+  return {
+    usecases: !!schema.usecases,
+    directory: schema.name,
+    tags: 'type:domain',
+    name: 'domain',
+  };
 }
 
 export default async function (tree: Tree, schema: Schema) {
-  await libraryGenerator(tree, normalizeOptions(schema));
-  const project = readProjectConfiguration(tree, `${schema.directory}-domain`);
+  const normalized = normalizeOptions(schema);
 
-  generateFiles(tree, join(__dirname, 'files'), project.sourceRoot, {
-    entity: names(schema.directory),
-    name: schema.directory,
-    tmpl: '',
-  });
+  await libraryGenerator(tree, normalized);
+
+  const directory = `${normalized.directory}-domain`;
+  const project = readProjectConfiguration(tree, directory);
+
+  if (normalized.usecases) {
+    generateFiles(tree, join(__dirname, 'files'), project.sourceRoot, {
+      entity: names(normalized.directory),
+      name: normalized.directory,
+      tmpl: '',
+    });
+  }
 
   await formatFiles(tree);
 

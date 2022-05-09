@@ -11,6 +11,11 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "usecases": {
+      "type": "boolean",
+      "description": "Generate usecases",
+      "$default": true
     }
   },
   "required": ["name"]

@@ -2,7 +2,7 @@ import { <%= entity.className %>Repository } from '../../repositories/<%= name %
 import { <%= entity.className %>Entity } from '../../entities/<%= name %>';
 
 export class Find<%= entity.className %>ByUseCase {
-  constructor(private readonly _repository: <%= entity.className %>Repository) {}
+  constructor(private readonly _repository: <%= entity.className %>Repository<<%= entity.className %>Entity>) {}
 
   execute<K extends keyof <%= entity.className %>Entity>(property: K, value: <%= entity.className %>Entity[K]) {
     return this._repository.findBy(property, value);

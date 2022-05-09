@@ -1,4 +1,9 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "core-base": "libs/core/base",
+    "course-domain": "libs/course/domain",
+    "learn-domain": "libs/learn/domain",
+    "student-domain": "libs/student/domain"
+  }
 }

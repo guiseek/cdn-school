@@ -1,0 +1,23 @@
+{
+  "root": "libs/learn/domain",
+  "sourceRoot": "libs/learn/domain/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/learn/domain/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/learn/domain"],
+      "options": {
+        "jestConfig": "libs/learn/domain/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": ["type:domain"]
+}
