@@ -4,6 +4,7 @@
     "app": "apps/app",
     "app-e2e": "apps/app-e2e",
     "core-base": "libs/core/base",
+    "course-api-content": "libs/course/api-content",
     "course-data-access": "libs/course/data-access",
     "course-domain": "libs/course/domain",
     "course-feature-challenge": "libs/course/feature-challenge",
@@ -14,6 +15,10 @@
     "learn-feature-shell": "libs/learn/feature-shell",
     "room-domain": "libs/room/domain",
     "room-feature-x": "libs/room/feature-x",
-    "student-domain": "libs/student/domain"
+    "student-data-access": "libs/student/data-access",
+    "student-domain": "libs/student/domain",
+    "student-feature-dashboard": "libs/student/feature-dashboard",
+    "student-feature-roadmap": "libs/student/feature-roadmap",
+    "student-feature-shell": "libs/student/feature-shell"
   }
 }

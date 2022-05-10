@@ -1,0 +1,24 @@
+{
+  "sourceRoot": "libs/student/feature-roadmap/src",
+  "projectType": "library",
+  "tags": ["type:feature"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/student/feature-roadmap/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/student/feature-roadmap"],
+      "options": {
+        "jestConfig": "libs/student/feature-roadmap/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

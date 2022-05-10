@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@cdn-school/core/base": ["libs/core/base/src/index.ts"],
+      "@cdn-school/course/api-content": [
+        "libs/course/api-content/src/index.ts"
+      ],
       "@cdn-school/course/data-access": [
         "libs/course/data-access/src/index.ts"
       ],
@@ -34,7 +37,19 @@
       ],
       "@cdn-school/room/domain": ["libs/room/domain/src/index.ts"],
       "@cdn-school/room/feature-x": ["libs/room/feature-x/src/index.ts"],
-      "@cdn-school/student/domain": ["libs/student/domain/src/index.ts"]
+      "@cdn-school/student/data-access": [
+        "libs/student/data-access/src/index.ts"
+      ],
+      "@cdn-school/student/domain": ["libs/student/domain/src/index.ts"],
+      "@cdn-school/student/feature-dashboard": [
+        "libs/student/feature-dashboard/src/index.ts"
+      ],
+      "@cdn-school/student/feature-roadmap": [
+        "libs/student/feature-roadmap/src/index.ts"
+      ],
+      "@cdn-school/student/feature-shell": [
+        "libs/student/feature-shell/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
