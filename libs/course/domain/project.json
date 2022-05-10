@@ -1,5 +1,4 @@
 {
-  "root": "libs/course/domain",
   "sourceRoot": "libs/course/domain/src",
   "projectType": "library",
   "targets": {

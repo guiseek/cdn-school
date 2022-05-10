@@ -1,5 +1,4 @@
 {
-  "root": "libs/student/domain",
   "sourceRoot": "libs/student/domain/src",
   "projectType": "library",
   "targets": {

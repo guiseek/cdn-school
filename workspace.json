@@ -1,8 +1,11 @@
 {
   "version": 2,
   "projects": {
+    "app": "apps/app",
+    "app-e2e": "apps/app-e2e",
     "core-base": "libs/core/base",
     "course-domain": "libs/course/domain",
+    "learn-data-access": "libs/learn/data-access",
     "learn-domain": "libs/learn/domain",
     "student-domain": "libs/student/domain"
   }

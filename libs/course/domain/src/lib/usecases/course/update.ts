@@ -2,8 +2,6 @@ import { ArrayParam, UseCase } from '@cdn-school/core/base';
 import { CourseRepository } from '../../repositories/course';
 import { CourseEntity } from '../../entities/course';
 
-
-
 export class UpdateCourseUseCase
   implements
     UseCase<[ArrayParam<CourseEntity>, CourseEntity], Promise<CourseEntity>>

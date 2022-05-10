@@ -12,14 +12,16 @@ interface DtoMap<T> extends Record<RepositoryMethod, Method> {
   remove(params: RemoveDto<T>): Promise<T>;
 }
 
-export class BaseRepository<T, D extends Record<RepositoryMethod, Method>> implements Repository<T> {
+export class BaseRepository<T, D extends Record<RepositoryMethod, Method>>
+  implements Repository<T>
+{
   constructor(
     protected readonly httpClient: HttpClient,
     protected path: string
   ) {}
 
   find(params: FindDto<T>): Promise<T[]> {
-    let url = ''
+    let url = '';
 
     if (params) {
       const [propery, operator, value] = params;

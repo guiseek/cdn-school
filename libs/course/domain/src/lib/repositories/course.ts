@@ -2,8 +2,6 @@ import { ArrayOperatorParam, ArrayParam } from '@cdn-school/core/base';
 import { FindAllCoursesDto } from '../dtos/find-all-courses';
 import { CourseEntity } from '../entities/course';
 
-
-
 export abstract class CourseRepository<T extends CourseEntity = CourseEntity> {
   abstract findAll(params: FindAllCoursesDto): Promise<T[]>;
 
@@ -11,9 +9,7 @@ export abstract class CourseRepository<T extends CourseEntity = CourseEntity> {
 
   abstract create(course: T): Promise<T>;
 
-  abstract update(
-    [[property, value], course]: [ArrayParam<T>, T],
-  ): Promise<T>;
+  abstract update([[property, value], course]: [ArrayParam<T>, T]): Promise<T>;
 
   abstract batch(
     [property, operator, value]: ArrayOperatorParam<T>,

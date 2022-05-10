@@ -5,4 +5,3 @@ export type ArrayOperatorParam<T, O extends Operator = CommonOperator> = [
   O,
   T[keyof T]
 ];
-

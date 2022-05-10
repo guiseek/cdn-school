@@ -1,5 +1,4 @@
 {
-  "root": "libs/learn/domain",
   "sourceRoot": "libs/learn/domain/src",
   "projectType": "library",
   "targets": {

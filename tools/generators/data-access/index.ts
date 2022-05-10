@@ -9,7 +9,7 @@ import {
   readProjectConfiguration,
   getWorkspaceLayout,
 } from '@nrwl/devkit';
-import { readNxJson } from '@nrwl/devkit/src/generators/project-configuration';
+import { readNxJson } from '@nrwl/devkit';
 
 interface Schema {
   domain: string;
@@ -23,7 +23,7 @@ interface NormalizedSchema {
 
 function normalizeOptions(schema: Schema): NormalizedSchema {
   return {
-    directory: schema.domain.split('-')[0],
+    directory: schema.domain.replace(/\-domain/g, ''),
     name: 'data-access',
     tags: 'type:data-access',
   };
@@ -33,6 +33,7 @@ export default async function (tree: Tree, schema: Schema) {
   const normalized = normalizeOptions(schema);
 
   const { libsDir } = getWorkspaceLayout(tree);
+  const { npmScope } = readNxJson();
 
   const entityPath = join(
     libsDir,
@@ -56,6 +57,7 @@ export default async function (tree: Tree, schema: Schema) {
   generateFiles(tree, join(__dirname, 'files'), project.sourceRoot, {
     entity: names(normalized.directory),
     name: normalized.directory,
+    npmScope,
     tmpl: '',
   });
 

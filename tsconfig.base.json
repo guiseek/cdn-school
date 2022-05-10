@@ -17,6 +17,7 @@
     "paths": {
       "@cdn-school/core/base": ["libs/core/base/src/index.ts"],
       "@cdn-school/course/domain": ["libs/course/domain/src/index.ts"],
+      "@cdn-school/learn/data-access": ["libs/learn/data-access/src/index.ts"],
       "@cdn-school/learn/domain": ["libs/learn/domain/src/index.ts"],
       "@cdn-school/student/domain": ["libs/student/domain/src/index.ts"]
     }
