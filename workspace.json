@@ -4,9 +4,16 @@
     "app": "apps/app",
     "app-e2e": "apps/app-e2e",
     "core-base": "libs/core/base",
+    "course-data-access": "libs/course/data-access",
     "course-domain": "libs/course/domain",
+    "course-feature-challenge": "libs/course/feature-challenge",
+    "course-feature-content": "libs/course/feature-content",
+    "course-ui-content": "libs/course/ui-content",
     "learn-data-access": "libs/learn/data-access",
     "learn-domain": "libs/learn/domain",
+    "learn-feature-shell": "libs/learn/feature-shell",
+    "room-domain": "libs/room/domain",
+    "room-feature-x": "libs/room/feature-x",
     "student-domain": "libs/student/domain"
   }
 }

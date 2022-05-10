@@ -1,0 +1,24 @@
+{
+  "sourceRoot": "libs/course/feature-challenge/src",
+  "projectType": "library",
+  "tags": ["type:shell"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/course/feature-challenge/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/course/feature-challenge"],
+      "options": {
+        "jestConfig": "libs/course/feature-challenge/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

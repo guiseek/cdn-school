@@ -1,13 +1,10 @@
 import { CourseRepository } from '../../repositories/course';
 import { CourseEntity } from '../../entities/course';
-import { UseCase } from '@cdn-school/core/base';
 
-export class CreateCourseUseCase
-  implements UseCase<CourseEntity, Promise<CourseEntity>>
-{
-  constructor(private readonly _repository: CourseRepository) {}
+export class CreateCourseUseCase {
+  constructor(private readonly _repository: CourseRepository<CourseEntity>) {}
 
-  execute(course: CourseEntity) {
-    return this._repository.create(course);
+  execute(room: CourseEntity) {
+    return this._repository.create(room);
   }
 }

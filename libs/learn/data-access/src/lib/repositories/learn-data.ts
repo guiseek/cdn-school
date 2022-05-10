@@ -1,6 +1,7 @@
+import { LearnRepository } from '@cdn-school/learn/domain';
 import { LearnEntity } from '../entities/learn';
 
-export class LearnDataRepository {
+export abstract class LearnDataRepository implements LearnRepository {
   abstract findAll(): LearnEntity[];
 
   abstract findBy<K extends keyof LearnEntity>(

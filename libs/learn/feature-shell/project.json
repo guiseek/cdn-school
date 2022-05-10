@@ -1,0 +1,22 @@
+{
+  "sourceRoot": "libs/learn/feature-shell/src",
+  "projectType": "library",
+  "tags": ["type:shell"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/learn/feature-shell/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/learn/feature-shell"],
+      "options": {
+        "jestConfig": "libs/learn/feature-shell/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

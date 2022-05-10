@@ -1,0 +1,22 @@
+{
+  "sourceRoot": "libs/course/ui-content/src",
+  "projectType": "library",
+  "tags": ["type:ui"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/course/ui-content/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/course/ui-content"],
+      "options": {
+        "jestConfig": "libs/course/ui-content/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

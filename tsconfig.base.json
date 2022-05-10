@@ -16,9 +16,24 @@
     "baseUrl": ".",
     "paths": {
       "@cdn-school/core/base": ["libs/core/base/src/index.ts"],
+      "@cdn-school/course/data-access": [
+        "libs/course/data-access/src/index.ts"
+      ],
       "@cdn-school/course/domain": ["libs/course/domain/src/index.ts"],
+      "@cdn-school/course/feature-challenge": [
+        "libs/course/feature-challenge/src/index.ts"
+      ],
+      "@cdn-school/course/feature-content": [
+        "libs/course/feature-content/src/index.ts"
+      ],
+      "@cdn-school/course/ui-content": ["libs/course/ui-content/src/index.ts"],
       "@cdn-school/learn/data-access": ["libs/learn/data-access/src/index.ts"],
       "@cdn-school/learn/domain": ["libs/learn/domain/src/index.ts"],
+      "@cdn-school/learn/feature-shell": [
+        "libs/learn/feature-shell/src/index.ts"
+      ],
+      "@cdn-school/room/domain": ["libs/room/domain/src/index.ts"],
+      "@cdn-school/room/feature-x": ["libs/room/feature-x/src/index.ts"],
       "@cdn-school/student/domain": ["libs/student/domain/src/index.ts"]
     }
   },

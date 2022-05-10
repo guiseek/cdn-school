@@ -1,13 +1,10 @@
-import { ArrayParam, UseCase } from '@cdn-school/core/base';
 import { CourseRepository } from '../../repositories/course';
 import { CourseEntity } from '../../entities/course';
 
-export class RemoveCourseUseCase
-  implements UseCase<ArrayParam<CourseEntity>, Promise<CourseEntity>>
-{
-  constructor(private readonly _repository: CourseRepository) {}
+export class RemoveCourseUseCase {
+  constructor(private readonly _repository: CourseRepository<CourseEntity>) {}
 
-  execute([property, value]: ArrayParam<CourseEntity>) {
-    return this._repository.remove([property, value]);
+  execute<K extends keyof CourseEntity>(property: K, value: CourseEntity[K]) {
+    return this._repository.remove(property, value);
   }
 }

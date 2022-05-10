@@ -1,0 +1,22 @@
+{
+  "sourceRoot": "libs/course/feature-content/src",
+  "projectType": "library",
+  "tags": ["type:shell"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/course/feature-content/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/course/feature-content"],
+      "options": {
+        "jestConfig": "libs/course/feature-content/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

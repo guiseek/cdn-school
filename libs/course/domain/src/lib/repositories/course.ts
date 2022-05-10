@@ -1,20 +1,13 @@
-import { ArrayOperatorParam, ArrayParam } from '@cdn-school/core/base';
-import { FindAllCoursesDto } from '../dtos/find-all-courses';
 import { CourseEntity } from '../entities/course';
 
 export abstract class CourseRepository<T extends CourseEntity = CourseEntity> {
-  abstract findAll(params: FindAllCoursesDto): Promise<T[]>;
+  abstract findAll(): T[];
 
-  abstract findBy([property, value]: ArrayParam<T>): Promise<T>;
+  abstract findBy<K extends keyof T>(property: K, value: T[K]): T;
 
-  abstract create(course: T): Promise<T>;
+  abstract create(learn: T): T;
 
-  abstract update([[property, value], course]: [ArrayParam<T>, T]): Promise<T>;
+  abstract update<K extends keyof T>(property: K, value: T[K], learn: T): T;
 
-  abstract batch(
-    [property, operator, value]: ArrayOperatorParam<T>,
-    course: T
-  ): Promise<T>;
-
-  abstract remove([property, value]: ArrayParam<T>): Promise<T>;
+  abstract remove<K extends keyof T>(property: K, value: T[K]): T;
 }
