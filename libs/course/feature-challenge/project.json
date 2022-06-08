@@ -1,7 +1,7 @@
 {
   "sourceRoot": "libs/course/feature-challenge/src",
   "projectType": "library",
-  "tags": ["type:shell"],
+  "tags": ["type:feature"],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",

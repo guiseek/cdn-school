@@ -1,0 +1,22 @@
+{
+  "sourceRoot": "libs/platform/ui-nav/src",
+  "projectType": "library",
+  "tags": ["type:ui", "scope:platform"],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/platform/ui-nav/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/platform/ui-nav"],
+      "options": {
+        "jestConfig": "libs/platform/ui-nav/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

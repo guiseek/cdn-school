@@ -1,8 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "app": "apps/app",
-    "app-e2e": "apps/app-e2e",
     "core-base": "libs/core/base",
     "course-api-content": "libs/course/api-content",
     "course-data-access": "libs/course/data-access",
@@ -13,12 +11,15 @@
     "learn-data-access": "libs/learn/data-access",
     "learn-domain": "libs/learn/domain",
     "learn-feature-shell": "libs/learn/feature-shell",
+    "platform-data-access": "libs/platform/data-access",
+    "platform-ui-layout": "libs/platform/ui-layout",
+    "platform-ui-nav": "libs/platform/ui-nav",
     "room-domain": "libs/room/domain",
-    "room-feature-x": "libs/room/feature-x",
     "student-data-access": "libs/student/data-access",
     "student-domain": "libs/student/domain",
     "student-feature-dashboard": "libs/student/feature-dashboard",
     "student-feature-roadmap": "libs/student/feature-roadmap",
-    "student-feature-shell": "libs/student/feature-shell"
+    "student-feature-shell": "libs/student/feature-shell",
+    "web": "apps/web"
   }
 }

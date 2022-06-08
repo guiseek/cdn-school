@@ -35,8 +35,14 @@
       "@cdn-school/learn/feature-shell": [
         "libs/learn/feature-shell/src/index.ts"
       ],
+      "@cdn-school/platform/data-access": [
+        "libs/platform/data-access/src/index.ts"
+      ],
+      "@cdn-school/platform/ui-layout": [
+        "libs/platform/ui-layout/src/index.ts"
+      ],
+      "@cdn-school/platform/ui-nav": ["libs/platform/ui-nav/src/index.ts"],
       "@cdn-school/room/domain": ["libs/room/domain/src/index.ts"],
-      "@cdn-school/room/feature-x": ["libs/room/feature-x/src/index.ts"],
       "@cdn-school/student/data-access": [
         "libs/student/data-access/src/index.ts"
       ],
